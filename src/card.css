@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width:100%;
+    min-height: 100vh;
+    background-color: #0e0d12;
+    padding :40px 8%;
+    display: grid;
+    align-items: center;
+}
+.container .movie-cards{
+    width:100%;
+    display: grid;
+    /* background-color: aqua; */
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap:20px
+}
+.movie-cards .card{
+    position: relative;
+    width: 280px;
+    columns: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card img{
+   
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    
+    
+}
+.card .content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.2),#ff0000d7);
+    padding: 85% 4% 0 4%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.movie-cards .card:hover .content{
+    opacity:1;
+}
+.content .name{
+    font-size: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+.content .infos{
+font-size: 12px;
+font-weight: 600;
+color: #fff;
+}
+.content .short-desc{
+    font-size: 14px;
+    line-height: 1.1;
+    padding: 6px 0;
+    color: #fff;
+}
+.content .icons a i{
+transition: all 0.5s;
+}
+.content .icons a:hover i{
+    transform: translateY(-2px);
+}
+.movie-cards .card:hover img{
+    transform: scale(1.05);
+    filter: blur(0.5px);
+}
+
+@media(max-width: 560px){
+    .card .content{
+        padding :95% 4% 0 4% ;
+    }
+    .content .name{
+        font-size: 32px;
+    }
+    .content .info,
+    .content .short-desc{
+        font-size: 14px;
+    }
+}
+
+.add-card-container{
+    margin-top: 4rem;
+    border: 2px solid red;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.box-decoration {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 130px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-label{
+    /* border: 2px solid blue;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+    font-size: large; */
+    font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        cursor: pointer;
+}
+.uploaded-image{
+    height: 200px;
+    width: 200px;
+    border-radius:50%;
+}
+
+
+
+/* 
+ .new-movie-card{
+    width: 14rem;
+    height: 20rem;
+    background-color: rgb(236, 236, 231);
+    border-radius: 2rem;
+    
+}
+.upload-image, .movie-image{
+    width: 14rem;
+    height: 10rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    
+}
+
+
+
+.new-movie-card{
+    margin: auto;
+    border: solid 1px grey;
+}
+
+.movie-title:focus{
+    border: solid 2px red;
+}
+.movie-title, .movie-description, .movie-rate {
+    background-color:#676060dd;
+    border: none;
+    width: 14rem;
+    
+}
+.movie-title{
+    height: 1.5rem;
+}
+.movie-description{
+    width: 14rem;
+    height: 6rem;
+    margin-top: 1rem;
+}
+.movie-rate {
+    width: 14rem;
+    height: 1rem;
+    margin-top: 1rem;
+} */
